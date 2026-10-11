@@ -6,7 +6,7 @@ Savestates for MiSTer cores that do not have them yet. These are unofficial test
 
 Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre1](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre1).
 
-1. Copy `TurboGrafx16_SS_v0.2.0-pre1.rbf` to `_Console` on the SD card. HuCard and SuperGrafx games need nothing else.
+1. Copy `TurboGrafx16_SS_20260923.rbf` to `_Console` on the SD card. HuCard and SuperGrafx games need nothing else.
 2. For CD games, also replace the Main:
    - disc images: [tg16-savestates-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/tg16-savestates-v0.2.0-pre1), replaces `MiSTer`
    - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [tg16-savestates-physdisc-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/tg16-savestates-physdisc-v0.2.0-pre1), replaces `MiSTer_Physical-CD`
@@ -16,10 +16,12 @@ Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre1](ht
 
 Savestates for MegaCD games. Latest release: [v0.1.0-pre1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre1).
 
-1. Copy `MegaCD_SS_v0.1.0-pre1.rbf` to `_Console` on the SD card.
+1. Copy `MegaCD_SS_20261011.rbf` to `_Console` on the SD card.
 2. Replace the Main:
-   - disc images: [savestates-20261011](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/savestates-20261011), replaces `MiSTer`
-   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [savestates-20261011](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/savestates-20261011), replaces `MiSTer_Physical-CD`
+   - disc images: [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates), replaces `MiSTer`
+   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates), replaces `MiSTer_Physical-CD`
+
+If you use both cores, take the Main with both, listed under About the Main.
 
 ## Use
 
@@ -31,7 +33,14 @@ The Main is the MiSTer program in `/media/fat`. The modified Main pauses CD data
 
 Keep a copy of the original file before you replace it. `update_all` and Physical Disc Support updates can put the original file back.
 
-The savestates-20261011 releases have three builds each: MegaCD and TurboGrafx16 CD together, MegaCD only, and TurboGrafx16 CD only. Each build comes from its own branch, and `savestates` is the other two merged. The TurboGrafx16 CD changes in these builds have not been tested with that core yet. Until then, use the tg16 Mains for TurboGrafx16 CD games.
+| Savestates for | Disc images, replaces `MiSTer` | Real discs, replaces `MiSTer_Physical-CD` |
+|---|---|---|
+| MegaCD and TurboGrafx16 | [20261010-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates) | [v2.10.0-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates) |
+| MegaCD | [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates) | [v2.10.0-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates) |
+| TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
+| TurboGrafx16, September build | [tg16-savestates-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/tg16-savestates-v0.2.0-pre1) | [tg16-savestates-physdisc-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/tg16-savestates-physdisc-v0.2.0-pre1) |
+
+Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. The TurboGrafx16 changes are the same in all of them, but only the September builds have been tested with that core. Use those for TurboGrafx16 CD games until the newer ones are tested.
 
 ## Source
 
