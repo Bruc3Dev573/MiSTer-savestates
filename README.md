@@ -4,13 +4,13 @@ Savestates for MiSTer cores that do not have them yet. These are unofficial test
 
 ## TurboGrafx16 / PC Engine
 
-Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre1](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre1).
+Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2).
 
-1. Copy `TurboGrafx16_SS_20260923.rbf` to `_Console` on the SD card. HuCard and SuperGrafx games need nothing else.
+1. Copy `TurboGrafx16_SS_20261011.rbf` to `_Console` on the SD card. HuCard and SuperGrafx games need nothing else.
 2. For CD games, also replace the Main:
-   - disc images: [tg16-savestates-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/tg16-savestates-v0.2.0-pre1), replaces `MiSTer`
-   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates), replaces `MiSTer_Physical-CD`
-3. Set **MB128** to **Disabled** in the OSD. With MB128 on, Save state and Restore state stay greyed out for every game.
+   - disc images: [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates), replaces `MiSTer`
+   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates), replaces `MiSTer_Physical-CD`, not checked with this core
+3. Set **MB128** to **Disabled** in the OSD. If MB128 was enabled, reload the core with it disabled before using savestates. Back up existing slots; compatibility between core versions is not guaranteed.
 
 ## MegaCD / Sega CD
 
@@ -39,7 +39,7 @@ Keep a copy of the original file before you replace it. `update_all` and Physica
 | MegaCD | [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates) | [v2.10.0-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
 
-Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. The TurboGrafx16 changes are the same in all of them, but only the September build for disc images, [tg16-savestates-v0.2.0-pre1](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/tg16-savestates-v0.2.0-pre1), has been tested with that core. Use it for TurboGrafx16 CD games from disc images until the newer ones are tested. The builds for real discs have not been tested with a real drive yet.
+Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. TurboGrafx16 `v0.2.0-pre2` was checked on MiSTer with the disc-image Main [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load. These were targeted checks, not the full suite. The combined Main was not checked with this core, and the builds for real discs have not been tested with a real drive.
 
 ## Source
 
