@@ -10,6 +10,10 @@ Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre2](ht
 2. For CD games, also replace the Main:
    - disc images: [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates), replaces `MiSTer`
    - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates), replaces `MiSTer_Physical-CD`, not checked with this core
+
+   > [!WARNING]
+   > CD savestates require the modified Main. With the official Main, CD slots are not saved under the disc's name and can overwrite the slots of a HuCard loaded earlier in the same session. Loading a slot from another game can hang the core. HuCard savestates do not require a modified Main.
+
 3. Set **MB128** to **Disabled** in the OSD. If MB128 was enabled, reload the core with it disabled before using savestates. Back up existing slots; compatibility between core versions is not guaranteed.
 
 ## MegaCD / Sega CD
