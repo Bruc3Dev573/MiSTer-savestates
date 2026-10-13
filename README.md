@@ -18,12 +18,12 @@ Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre2](ht
 
 ## MegaCD / Sega CD
 
-Savestates for MegaCD games. Latest release: [v0.1.0-pre1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre1).
+Savestates for MegaCD games. Latest release: [v0.1.0-pre2](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre2).
 
-1. Copy `MegaCD_SS_20261011.rbf` to `_Console` on the SD card.
+1. Copy `MegaCD_SS_20261013.rbf` to `_Console` on the SD card.
 2. Use the modified Main. Replace the file below, or [select it per core](#use-a-different-main-for-each-core):
    - disc images: [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates), replaces `MiSTer`
-   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates), replaces `MiSTer_Physical-CD`
+   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates), replaces `MiSTer_Physical-CD`, not checked with this core
 
 If you use both cores, you can use the combined Main listed under About the Main, or select separate Mains per core as shown below.
 
@@ -44,6 +44,8 @@ Keep a copy of the original file before you replace it. `update_all` and Physica
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
 
 Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. TurboGrafx16 `v0.2.0-pre2` was checked on MiSTer with the disc-image Main [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load. These were targeted checks, not the full suite. The combined Main was not checked with this core, and the builds for real discs have not been tested with a real drive.
+
+MegaCD `v0.1.0-pre2` was checked on MiSTer with the disc-image Main [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates): Crime Patrol and Flashback save/load, eight games without savestates, Microcosm and mcd-verificator. These were targeted checks, not the full suite. The combined Main and the build for real discs were not checked with this core.
 
 ## Use a different Main for each core
 
