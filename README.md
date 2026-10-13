@@ -18,9 +18,9 @@ Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre2](ht
 
 ## MegaCD / Sega CD
 
-Savestates for MegaCD games. Latest release: [v0.1.0-pre2](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre2).
+Savestates for MegaCD games. Latest release: [v0.1.0-pre3](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre3).
 
-1. Copy `MegaCD_SS_20261013.rbf` to `_Console` on the SD card.
+1. Copy `MegaCD_SS_20261013b.rbf` to `_Console` on the SD card and remove the older `MegaCD_SS_*.rbf`.
 2. Use the modified Main. Replace the file below, or [select it per core](#use-a-different-main-for-each-core):
    - disc images: [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2), replaces `MiSTer`
    - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r2), replaces `MiSTer_Physical-CD`, not checked with this core
@@ -45,7 +45,7 @@ Keep a copy of the original file before you replace it. `update_all` and Physica
 
 Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. TurboGrafx16 `v0.2.0-pre2` was checked on MiSTer with the disc-image Main [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load. These were targeted checks, not the full suite. The combined Main was not checked with this core, and the builds for real discs have not been tested with a real drive.
 
-MegaCD `v0.1.0-pre2` was checked on MiSTer with the disc-image Main [20261010-megacd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates): Crime Patrol and Flashback save/load, eight games without savestates, Microcosm and mcd-verificator. It was checked again with [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2), which also fixes Thunder Storm FX (Japan) on the Sega logo, the Flashback hang after the level 2 machine cutscene with CHD images, and a slot file being written again on every load: Thunder Storm FX, Spider-Man, Final Fight CD, Sonic CD, Cobra Command and that Flashback cutscene. These were targeted checks, not the full suite. The combined Main and the build for real discs were not checked with this core.
+MegaCD `v0.1.0-pre3` was checked on MiSTer with the disc-image Main [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2): Ultraverse Prime over HDMI, the Flashback level 2 machine cutscene, save/load in Cobra Command, slots from earlier versions in Crime Patrol and Flashback, and ten games without savestates. The r2 Main also fixes Thunder Storm FX (Japan) on the Sega logo, the Flashback hang after that cutscene with CHD images, and a slot file being written again on every load. These were targeted checks, not the full suite. The combined Main and the build for real discs were not checked with this core.
 
 ## Use a different Main for each core
 
