@@ -1,51 +1,46 @@
 # MiSTer savestates
 
-Savestates for MiSTer cores that do not have them yet. These are unofficial test builds, not MiSTer-devel releases. Please report problems in the repository of each core, not on the official repos.
+Savestates for MiSTer cores that do not have them yet. Unofficial test builds, not MiSTer-devel releases. Report problems in the repository of each core, not on the official repos.
 
-## TurboGrafx16 / PC Engine
+| Core | Latest release | Copy to `_Console` | Modified Main needed |
+|---|---|---|---|
+| TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
+| MegaCD / Sega CD | [v0.1.0-pre3](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre3) | `MegaCD_SS_20261013b.rbf` | Yes |
 
-Savestates for HuCard, SuperGrafx and CD games. Latest release: [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2).
+## Install
 
-1. Copy `TurboGrafx16_SS_20261011.rbf` to `_Console` on the SD card. HuCard and SuperGrafx games need nothing else.
-2. For CD games, also use the modified Main. Replace the file below, or [select it per core](#use-a-different-main-for-each-core):
-   - disc images: [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates), replaces `MiSTer`
-   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates), replaces `MiSTer_Physical-CD`, not checked with this core
+1. Copy the RBF to `_Console` on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
+2. Replace the Main with the one from [the table below](#which-main), or [select it per core](#use-a-different-main-for-each-core).
+3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
-   > **Warning**
-   > CD savestates require the modified Main. With the official Main, CD slots are not saved under the disc's name and can overwrite the slots of a HuCard loaded earlier in the same session. Loading a slot from another game can hang the core. HuCard savestates do not require a modified Main.
+> [!WARNING]
+> CD savestates need the modified Main. With the official Main, CD slots are not kept under the disc's name and can overwrite the slots of a HuCard loaded earlier in the same session, and loading a slot from another game can hang the core.
 
-3. Set **MB128** to **Disabled** in the OSD. If MB128 was enabled, reload the core with it disabled before using savestates. Back up existing slots; compatibility between core versions is not guaranteed.
+Both cores save with **Alt+F1-F4** and load with **F1-F4**. The OSD has the same actions. Each release lists the pad controls and the known limits.
 
-## MegaCD / Sega CD
+## Which Main
 
-Savestates for MegaCD games. Latest release: [v0.1.0-pre3](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre3).
+The Main is the MiSTer program at the SD root. Keep a copy of the original file before you replace it; `update_all` and Physical Disc Support updates put the original back.
 
-1. Copy `MegaCD_SS_20261013b.rbf` to `_Console` on the SD card and remove the older `MegaCD_SS_*.rbf`.
-2. Use the modified Main. Replace the file below, or [select it per core](#use-a-different-main-for-each-core):
-   - disc images: [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2), replaces `MiSTer`
-   - real discs with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc): [v2.10.0-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r2), replaces `MiSTer_Physical-CD`, not checked with this core
-
-If you use both cores, you can use the combined Main listed under About the Main, or select separate Mains per core as shown below.
-
-## Use
-
-Both cores save with Alt+F1-F4 and load with F1-F4. The OSD has the same actions. Each release explains the pad controls and the known limits.
-
-## About the Main
-
-The Main is the MiSTer program in `/media/fat`. The modified Main pauses CD data while the core is frozen and keeps CD slots on the SD card under the disc's name. The MegaCD version also puts the CD drive back where the game was after a load. Other cores work as with the official Main.
-
-Keep a copy of the original file before you replace it. `update_all` and Physical Disc Support updates can put the original file back.
-
-| Savestates for | Disc images, replaces `MiSTer` | Real discs, replaces `MiSTer_Physical-CD` |
+| Savestate cores you use | Disc images, replaces `MiSTer` | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc), replaces `MiSTer_Physical-CD` |
 |---|---|---|
-| MegaCD and TurboGrafx16 | [20261010-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r2) | [v2.10.0-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r2) |
 | MegaCD | [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) | [v2.10.0-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r2) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
+| Both | [20261010-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r2) | [v2.10.0-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r2) |
 
-Each build comes from its own branch, and `savestates` is `megacd-savestates` and `pcecd-savestates` merged. TurboGrafx16 `v0.2.0-pre2` was checked on MiSTer with the disc-image Main [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load. These were targeted checks, not the full suite. The combined Main was not checked with this core, and the builds for real discs have not been tested with a real drive.
+Only the single-core builds for disc images were tested on MiSTer with the latest cores. The combined builds and the builds for real drives were not, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
 
-MegaCD `v0.1.0-pre3` was checked on MiSTer with the disc-image Main [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2): Ultraverse Prime over HDMI, the Flashback level 2 machine cutscene, save/load in Cobra Command, slots from earlier versions in Crime Patrol and Flashback, and ten games without savestates. The r2 Main also fixes Thunder Storm FX (Japan) on the Sega logo, the Flashback hang after that cutscene with CHD images, and a slot file being written again on every load. These were targeted checks, not the full suite. The combined Main and the build for real discs were not checked with this core.
+The r2 MegaCD builds also fix Thunder Storm FX (Japan) on the Sega logo and the Flashback hang after the level 2 machine cutscene with CHD images. These two fixes apply to the official MegaCD core too; other cores work as with the official Main.
+
+<details>
+<summary>What was tested</summary>
+
+- TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
+- MegaCD v0.1.0-pre3 with [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2): Ultraverse Prime over HDMI, the Flashback level 2 machine cutscene, save/load in Cobra Command, slots from earlier versions in Crime Patrol and Flashback, and ten games without savestates.
+
+These were targeted checks, not the full suite. Details are in each release.
+
+</details>
 
 ## Use a different Main for each core
 
