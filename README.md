@@ -16,7 +16,16 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 > [!WARNING]
 > CD savestates need the modified Main. With the official Main, CD slots are not kept under the disc's name and can overwrite the slots of a HuCard loaded earlier in the same session, and loading a slot from another game can hang the core.
 
-Both cores save with **Alt+F1-F4** and load with **F1-F4**. The OSD has the same actions. Each release lists the pad controls and the known limits.
+## Controls
+
+| | TurboGrafx16 | MegaCD |
+|---|---|---|
+| Keyboard | **Alt+F1-F4** save to slot 1-4, **F1-F4** load | same |
+| Pad | Hold the button mapped to **Savestates**, then **Down** save, **Up** load, **Left/Right** change slot | Hold **Savestate**, then **Mode+Down** save, **Mode+Up** load, **Left/Right** change slot |
+| OSD | Save state and Restore state | same, with a slot selector |
+| Notes | Enable **Savestates to SDCard** to keep slots on the SD card. Writing a slot to the SD card can cause a short CD audio gap. | Set the region in the OSD; F1-F3 no longer change it. |
+
+Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits.
 
 ## Which Main
 
