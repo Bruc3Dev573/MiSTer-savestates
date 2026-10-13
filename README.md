@@ -10,7 +10,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 ## Install
 
 1. Copy the RBF to `_Console` on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
-2. Replace the Main with the one from [the table below](#which-main), or [select it per core](#use-a-different-main-for-each-core).
+2. Install the modified Main from [the table below](#which-main), either by replacing `MiSTer` or, to keep the official Main for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core).
 3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
 > [!WARNING]
@@ -29,9 +29,9 @@ Load a state with the same game or disc, BIOS and region you saved it with. Each
 
 ## Which Main
 
-The Main is the MiSTer program at the SD root. Keep a copy of the original file before you replace it; `update_all` and Physical Disc Support updates put the original back.
+The Main is the MiSTer program at the SD root. You can replace it, keeping a copy of the original (`update_all` and Physical Disc Support updates put the original back), or keep it and [select the modified one per core in `MiSTer.ini`](#use-a-different-main-for-each-core).
 
-| Savestate cores you use | Disc images, replaces `MiSTer` | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc), replaces `MiSTer_Physical-CD` |
+| Savestate cores you use | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
 | MegaCD | [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) | [v2.10.0-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r2) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
@@ -53,31 +53,33 @@ These were targeted checks, not the full suite. Details are in each release.
 
 ## Use a different Main for each core
 
-Instead of replacing the official Main, you can keep it as `MiSTer` and select the modified binaries through `MiSTer.ini`. Only one Main runs at a time.
+Keep the official `MiSTer` and let MiSTer start the modified Main only for the savestate cores, with the `main=` option of `MiSTer.ini`. This is an [official MiSTer setting](https://github.com/MiSTer-devel/Main_MiSTer/blob/738cb7acc246c830739d02d862c0cc2a275738bb/MiSTer.ini), not part of the savestate builds.
 
-1. Back up `MiSTer.ini` and keep the official `MiSTer` executable at the SD root.
-2. Download `MiSTer` from [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) and rename it to `MiSTer_PCECD_SS`. For MegaCD, download `MiSTer` from [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) and rename it to `MiSTer_MegaCD_SS`.
-3. Power off and use a computer to copy the renamed files to the SD root, alongside `MiSTer`. Add the following to your existing `MiSTer.ini`. If a section already exists, add its `main=` line there rather than creating a duplicate section.
+1. Download the Main of each core from [the table above](#which-main) and rename it:
 
-```ini
-[TGFX16]
-main=MiSTer_PCECD_SS
+   | Core | Download `MiSTer` from | Rename to |
+   |---|---|---|
+   | MegaCD | [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) | `MiSTer_MegaCD_SS` |
+   | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | `MiSTer_PCECD_SS` |
 
-[MegaCD]
-main=MiSTer_MegaCD_SS
-```
+2. Power off and copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
+3. Back up `MiSTer.ini` and add the sections you need. If a section already exists, add the `main=` line to it instead of a second copy.
 
-Use only the section you need if you have just one of these cores. The names in `main=` must match the files on the card.
+   ```ini
+   [MegaCD]
+   main=MiSTer_MegaCD_SS
 
-`TGFX16` and `MegaCD` are core IDs, not RBF filenames. The `[TGFX16]` rule also applies to the official TurboGrafx16 core, because it uses the same ID.
+   [TGFX16]
+   main=MiSTer_PCECD_SS
+   ```
 
-Main switches automatically when you load a core. With no other `main=` rules, Menu and other cores use the official `MiSTer`. Check any existing `main=` entries in `[MiSTer]`, `[MENU]` or matching core sections; later matching settings can override earlier ones.
+MiSTer switches Main when you load a core; Menu and the other cores keep the official one.
 
-To check the selection over SSH, run `ps -eo pid,args` after loading a core and look for the executable named in its `main=` entry. If the file is missing or its name is wrong, MiSTer can stay on the current Main instead of switching. Loading the core alone does not prove that the right Main is running.
-
-When updating a modified Main, repeat the download and rename steps for that file. This example is for CD images. Physical Disc Support uses its own profiles and `MiSTer_Physical-CD`; follow [its configuration guide](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc#misterini-configuration).
-
-The `main=` option is part of the [official MiSTer.ini example](https://github.com/MiSTer-devel/Main_MiSTer/blob/738cb7acc246c830739d02d862c0cc2a275738bb/MiSTer.ini), not a savestate-specific setting.
+- `MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD r2 fixes help the official core too.
+- The names after `main=` must match the files on the card exactly. If a file is missing, MiSTer stays on the Main it is running. To check over SSH, run `ps -eo pid,args` after loading the core and look for that file name.
+- Existing `main=` lines in `[MiSTer]`, `[MENU]` or a matching core section can override these.
+- To update a modified Main, download it again and rename it the same way.
+- For real CD drives, Physical Disc Support selects `MiSTer_Physical-CD` with its own profiles; see [its configuration guide](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc#misterini-configuration).
 
 ## Source
 
