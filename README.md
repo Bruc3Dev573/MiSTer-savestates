@@ -5,7 +5,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | Core | Latest release | Copy to `_Console` | Modified Main needed |
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
-| MegaCD / Sega CD | [v0.1.0-pre3](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre3) | `MegaCD_SS_20261013b.rbf` | Yes |
+| MegaCD / Sega CD | [v0.1.0-pre4](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre4) | `MegaCD_SS_20261016.rbf` | Yes |
 
 ## Install
 
@@ -33,19 +33,19 @@ The Main is the MiSTer program at the SD root. You can replace it, keeping a cop
 
 | Savestate cores you use | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
-| MegaCD | [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) | [v2.10.0-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r2) |
+| MegaCD | [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3) | [v2.10.0-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r3) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
-| Both | [20261010-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r2) | [v2.10.0-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r2) |
+| Both | [20261010-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r3) | [v2.10.0-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r3) |
 
-Only the single-core builds for disc images were tested on MiSTer with the latest cores. The combined builds and the builds for real drives were not, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
+Only the single-core builds for disc images were tested on MiSTer with the latest cores; the combined build for disc images was checked with the MegaCD core only. The builds for real drives were not tested on MiSTer, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
 
-The r2 MegaCD builds also fix Thunder Storm FX (Japan) on the Sega logo and the Flashback hang after the level 2 machine cutscene with CHD images. These two fixes apply to the official MegaCD core too; other cores work as with the official Main.
+The MegaCD builds also fix Thunder Storm FX (Japan) on the Sega logo and the Flashback hang after the level 2 machine cutscene with CHD images. These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r3 with the MegaCD core v0.1.0-pre4: its other fixes need both.
 
 <details>
 <summary>What was tested</summary>
 
 - TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
-- MegaCD v0.1.0-pre3 with [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2): Ultraverse Prime over HDMI, the Flashback level 2 machine cutscene, save/load in Cobra Command, slots from earlier versions in Crime Patrol and Flashback, and ten games without savestates.
+- MegaCD v0.1.0-pre4 with [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3): krikzz's mcd-verificator, 40 save/load cycles and saves without loading in Power Rangers, save and load in a Crime Patrol mission, slots from earlier versions in Crime Patrol and Flashback, and ten games without savestates.
 
 These were targeted checks, not the full suite. Details are in each release.
 
@@ -59,7 +59,7 @@ Keep the official `MiSTer` and let MiSTer start the modified Main only for the s
 
    | Core | Download `MiSTer` from | Rename to |
    |---|---|---|
-   | MegaCD | [20261010-megacd-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r2) | `MiSTer_MegaCD_SS` |
+   | MegaCD | [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3) | `MiSTer_MegaCD_SS` |
    | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | `MiSTer_PCECD_SS` |
 
 2. Power off and copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
@@ -75,7 +75,7 @@ Keep the official `MiSTer` and let MiSTer start the modified Main only for the s
 
 MiSTer switches Main when you load a core; Menu and the other cores keep the official one.
 
-- `MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD r2 fixes help the official core too.
+- `MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD fixes for Thunder Storm FX and Flashback help the official core too.
 - The names after `main=` must match the files on the card exactly. If a file is missing, MiSTer stays on the Main it is running. To check over SSH, run `ps -eo pid,args` after loading the core and look for that file name.
 - Existing `main=` lines in `[MiSTer]`, `[MENU]` or a matching core section can override these.
 - To update a modified Main, download it again and rename it the same way.
