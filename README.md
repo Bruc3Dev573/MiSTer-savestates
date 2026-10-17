@@ -39,7 +39,20 @@ The Main is the MiSTer program at the SD root. You can replace it, keeping a cop
 
 Only the single-core builds for disc images were tested on MiSTer with the latest cores; the combined build for disc images was checked with the MegaCD core only. The builds for real drives were not tested on MiSTer, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
 
-The MegaCD builds also fix Thunder Storm FX (Japan) on the Sega logo and the Flashback hang after the level 2 machine cutscene with CHD images. These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r3 with the MegaCD core v0.1.0-pre5: its other fixes need both.
+The MegaCD builds also fix Thunder Storm FX (Japan) and Flashback (see the table below). These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r3 with the MegaCD core v0.1.0-pre5: its other fixes need both.
+
+### MegaCD games fixed so far
+
+| Game | What was wrong | Fixed in |
+|---|---|---|
+| Microcosm | After Start it showed "Document ends" and went back to the intro ([#66](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/66)) | core v0.1.0-pre2 |
+| Mighty Morphin Power Rangers | Starting an episode went black for up to 80 s or skipped it ([#84](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/84)) | core v0.1.0-pre3 |
+| Mighty Morphin Power Rangers | Froze a few seconds after loading a savestate, about once in 130 loads | core v0.1.0-pre5 |
+| Ultraverse Prime | Over HDMI the picture sheared for about 2 s every 10 s ([#36](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/36)) | core v0.1.0-pre3 |
+| Thunder Storm FX (Japan) | Froze on the Sega logo ([#111](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/111)) | Main r2, also with the official core |
+| Flashback | With CHD images, hung after the level 2 machine cutscene ([#49](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/49)) | Main r2, also with the official core |
+
+The other MegaCD fixes are not tied to a known game; each release lists them.
 
 <details>
 <summary>What was tested</summary>
