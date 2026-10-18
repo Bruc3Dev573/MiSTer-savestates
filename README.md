@@ -10,7 +10,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 ## Install
 
 1. Copy the RBF to `_Console` on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
-2. Install the modified Main from [the table below](#which-main), either by replacing `MiSTer` or, to keep the official Main for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core).
+2. Install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core).
 3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
 > [!WARNING]
@@ -29,15 +29,16 @@ Load a state with the same game or disc, BIOS and region you saved it with. Each
 
 ## Which Main
 
-The Main is the MiSTer program at the SD root. You can replace it, keeping a copy of the original (`update_all` and Physical Disc Support updates put the original back), or keep it and [select the modified one per core in `MiSTer.ini`](#use-a-different-main-for-each-core).
+The Main is the MiSTer program at the SD root. Each savestate core has its own modified Main. You can replace the official one, keeping a copy (`update_all` and Physical Disc Support updates put the original back), or keep it and [let MiSTer start the modified Main only for that core](#use-a-different-main-for-each-core). If you use both savestate cores, use one Main per core.
 
-| Savestate cores you use | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
+| Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
 | MegaCD | [20261010-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r4) | [v2.10.0-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r4) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
-| Both | [20261010-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r4) | [v2.10.0-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r4) |
 
-Only the single-core builds for disc images were tested on MiSTer with the latest cores; the combined build for disc images was checked with the MegaCD core only. The builds for real drives were not tested on MiSTer, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
+The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only, with save and load in Mighty Morphin Power Rangers; no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
+
+The Mains with both cores in one file, [20261010-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r4) and [v2.10.0-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r4), stay online but are no longer updated. Later MegaCD fixes will not be in them.
 
 The MegaCD builds also fix Thunder Storm FX (Japan) and Flashback (see the table below). These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r4 with the MegaCD core v0.1.0-pre6: its other fixes need both.
 
@@ -66,17 +67,21 @@ These were targeted checks, not the full suite. Details are in each release.
 
 ## Use a different Main for each core
 
-Keep the official `MiSTer` and let MiSTer start the modified Main only for the savestate cores, with the `main=` option of `MiSTer.ini`. This is an [official MiSTer setting](https://github.com/MiSTer-devel/Main_MiSTer/blob/738cb7acc246c830739d02d862c0cc2a275738bb/MiSTer.ini), not part of the savestate builds.
+Keep the official Main and let MiSTer start a modified one only for the savestate cores, with the `main=` option of `MiSTer.ini`. This is an [official MiSTer setting](https://github.com/MiSTer-devel/Main_MiSTer/blob/738cb7acc246c830739d02d862c0cc2a275738bb/MiSTer.ini), not part of the savestate builds. MiSTer switches Main when you load a core; the menu and the other cores keep the Main they had.
 
-1. Download the Main of each core from [the table above](#which-main) and rename it:
+Power off and back up `MiSTer.ini` before you start. If a section below already exists, add the `main=` line to it instead of a second copy.
 
-   | Core | Download `MiSTer` from | Rename to |
-   |---|---|---|
-   | MegaCD | [20261010-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r4) | `MiSTer_MegaCD_SS` |
-   | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | `MiSTer_PCECD_SS` |
+### Disc images
 
-2. Power off and copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
-3. Back up `MiSTer.ini` and add the sections you need. If a section already exists, add the `main=` line to it instead of a second copy.
+1. Download `MiSTer` from each core's release in [the table above](#which-main) and rename it:
+
+   | Core | Rename to |
+   |---|---|
+   | MegaCD | `MiSTer_MegaCD_SS` |
+   | TurboGrafx16 | `MiSTer_PCECD_SS` |
+
+2. Copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
+3. Add the sections you need to `MiSTer.ini`:
 
    ```ini
    [MegaCD]
@@ -86,13 +91,37 @@ Keep the official `MiSTer` and let MiSTer start the modified Main only for the s
    main=MiSTer_PCECD_SS
    ```
 
-MiSTer switches Main when you load a core; Menu and the other cores keep the official one.
+`MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD fixes for Thunder Storm FX and Flashback help the official core too.
 
-- `MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD fixes for Thunder Storm FX and Flashback help the official core too.
+### Real CD drive (Physical Disc Support)
+
+Physical Disc Support starts its cores under profile names such as `A0CD-MegaCD` and `A0CD-TurboGrafx16-CD`, and selects its Main with an `[A0CD-*]` section in `MiSTer.ini` ([its guide](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc#misterini-configuration)). A section for one profile can name another Main.
+
+1. Download `MiSTer_Physical-CD` from each core's release in [the table above](#which-main) and rename it:
+
+   | Core | Rename to |
+   |---|---|
+   | MegaCD | `MiSTer_Physical-CD_MegaCD_SS` |
+   | TurboGrafx16 | `MiSTer_Physical-CD_PCECD_SS` |
+
+2. Copy the renamed files to the SD root, next to `MiSTer_Physical-CD`. Leave `MiSTer_Physical-CD` as it is.
+3. Add these sections to `MiSTer.ini`, **below** the `[A0CD-*]` section that Physical Disc Support added. When several sections match, the last `main=` wins, so a section above `[A0CD-*]` would be overridden.
+
+   ```ini
+   [A0CD-MegaCD]
+   main=MiSTer_Physical-CD_MegaCD_SS
+
+   [A0CD-TurboGrafx16-CD]
+   main=MiSTer_Physical-CD_PCECD_SS
+   ```
+
+The other Physical Disc cores keep `MiSTer_Physical-CD`, and Auto Disc Detection works as before: it starts the core, then MiSTer switches to the savestate Main. If the MegaCD MGL in `_Physical Disc Cores` still starts the official core, set its rbf entry to `_Console/MegaCD_SS`. This setup was checked on MiSTer with the profile names and disc images; it was not tried with a real drive.
+
+### Notes
+
 - The names after `main=` must match the files on the card exactly. If a file is missing, MiSTer stays on the Main it is running. To check over SSH, run `ps -eo pid,args` after loading the core and look for that file name.
 - Existing `main=` lines in `[MiSTer]`, `[MENU]` or a matching core section can override these.
 - To update a modified Main, download it again and rename it the same way.
-- For real CD drives, Physical Disc Support selects `MiSTer_Physical-CD` with its own profiles; see [its configuration guide](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc#misterini-configuration).
 
 ## Source
 
@@ -100,8 +129,8 @@ MiSTer switches Main when you load a core; Menu and the other cores keep the off
 |---|---|---|
 | [TurboGrafx16_MiSTer](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer) | [MiSTer-devel/TurboGrafx16_MiSTer](https://github.com/MiSTer-devel/TurboGrafx16_MiSTer) | `savestates` |
 | [MegaCD_MiSTer](https://github.com/Bruc3Dev573/MegaCD_MiSTer) | [MiSTer-devel/MegaCD_MiSTer](https://github.com/MiSTer-devel/MegaCD_MiSTer) | `savestates` |
-| [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) | `savestates`, `megacd-savestates`, `pcecd-savestates` |
-| [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | [Anime0t4ku/Main_MiSTer_Physical_Disc](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) | `savestates`, `megacd-savestates`, `pcecd-savestates` |
+| [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
+| [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | [Anime0t4ku/Main_MiSTer_Physical_Disc](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
 
 ## Report a problem
 
