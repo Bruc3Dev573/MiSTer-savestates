@@ -5,7 +5,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | Core | Latest release | Copy to `_Console` | Modified Main needed |
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
-| MegaCD / Sega CD | [v0.1.0-pre5](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre5) | `MegaCD_SS_20261017.rbf` | Yes |
+| MegaCD / Sega CD | [v0.1.0-pre6](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre6) | `MegaCD_SS_20261018.rbf` | Yes |
 
 ## Install
 
@@ -33,13 +33,13 @@ The Main is the MiSTer program at the SD root. You can replace it, keeping a cop
 
 | Savestate cores you use | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
-| MegaCD | [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3) | [v2.10.0-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r3) |
+| MegaCD | [20261010-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r4) | [v2.10.0-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r4) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
-| Both | [20261010-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r3) | [v2.10.0-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r3) |
+| Both | [20261010-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r4) | [v2.10.0-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r4) |
 
 Only the single-core builds for disc images were tested on MiSTer with the latest cores; the combined build for disc images was checked with the MegaCD core only. The builds for real drives were not tested on MiSTer, and no real drive was tested. If you use both cores, [one Main per core](#use-a-different-main-for-each-core) keeps you on the tested builds.
 
-The MegaCD builds also fix Thunder Storm FX (Japan) and Flashback (see the table below). These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r3 with the MegaCD core v0.1.0-pre5: its other fixes need both.
+The MegaCD builds also fix Thunder Storm FX (Japan) and Flashback (see the table below). These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r4 with the MegaCD core v0.1.0-pre6: its other fixes need both.
 
 ### MegaCD games fixed so far
 
@@ -58,7 +58,7 @@ The other MegaCD fixes are not tied to a known game; each release lists them.
 <summary>What was tested</summary>
 
 - TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
-- MegaCD v0.1.0-pre5 with [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3): krikzz's mcd-verificator, 100 save/load cycles and saves without loading in Power Rangers, save and load in a Crime Patrol mission, slots from earlier versions in Crime Patrol, Flashback and Power Rangers, and ten games without savestates.
+- MegaCD v0.1.0-pre6 with [20261010-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r4): krikzz's mcd-verificator, 100 save/load cycles and saves without loading in Power Rangers, save and load in a Crime Patrol mission, slots from earlier versions in Crime Patrol, Flashback and Power Rangers, and ten games without savestates.
 
 These were targeted checks, not the full suite. Details are in each release.
 
@@ -72,7 +72,7 @@ Keep the official `MiSTer` and let MiSTer start the modified Main only for the s
 
    | Core | Download `MiSTer` from | Rename to |
    |---|---|---|
-   | MegaCD | [20261010-megacd-savestates-r3](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r3) | `MiSTer_MegaCD_SS` |
+   | MegaCD | [20261010-megacd-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r4) | `MiSTer_MegaCD_SS` |
    | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | `MiSTer_PCECD_SS` |
 
 2. Power off and copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
