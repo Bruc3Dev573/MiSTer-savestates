@@ -5,7 +5,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | Core | Latest release | Copy to `_Console` | Modified Main needed |
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
-| MegaCD / Sega CD | [v0.1.0-pre8](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre8) | `MegaCD_SS_20261020.rbf` | Yes |
+| MegaCD / Sega CD | [v0.1.0-pre9](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre9) | `MegaCD_SS_20261022.rbf` | Yes |
 
 ## Install
 
@@ -25,7 +25,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | OSD | Save state and Restore state | same, with a slot selector |
 | Notes | Enable **Savestates to SDCard** to keep slots on the SD card. Writing a slot to the SD card can cause a short CD audio gap. | Set the region in the OSD; F1-F3 no longer change it. |
 
-Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits.
+Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits; for MegaCD all of them are on the [status page](MegaCD.md#known-limits).
 
 ## Which Main
 
@@ -33,33 +33,22 @@ The Main is the MiSTer program at the SD root. Each savestate core has its own m
 
 | Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
-| MegaCD | [20261010-megacd-savestates-r6](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r6) | [v2.10.0-megacd-savestates-r6](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r6) |
+| MegaCD | [20261010-megacd-savestates-r7](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r7) | [v2.10.0-megacd-savestates-r7](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r7) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
 
 The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only, with save and load in Mighty Morphin Power Rangers; no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
 
 The Mains with both cores in one file, [20261010-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r4) and [v2.10.0-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r4), stay online but are no longer updated. Later MegaCD fixes will not be in them.
 
-The MegaCD builds also fix Thunder Storm FX (Japan) and Flashback (see the table below). These two fixes apply to the official MegaCD core too; other cores work as with the official Main. Use r6 with the MegaCD core v0.1.0-pre8: its other fixes need both. Since r5 the build for disc images also stops each save from losing free space on the SD card.
+Use the MegaCD core and a Main of the same version together: some fixes are split between the two. The MegaCD Mains also fix Thunder Storm FX (Japan) and Flashback with CHD images, also with the official MegaCD core, and the one for disc images stops each save from losing free space on the SD card. Other cores work as with the official Main.
 
-### MegaCD games fixed so far
-
-| Game | What was wrong | Fixed in |
-|---|---|---|
-| Microcosm | After Start it showed "Document ends" and went back to the intro ([#66](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/66)) | core v0.1.0-pre2 |
-| Mighty Morphin Power Rangers | Starting an episode went black for up to 80 s or skipped it ([#84](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/84)) | core v0.1.0-pre3 |
-| Mighty Morphin Power Rangers | Froze a few seconds after loading a savestate, about once in 130 loads | core v0.1.0-pre5 |
-| Ultraverse Prime | Over HDMI the picture sheared for about 2 s every 10 s ([#36](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/36)) | core v0.1.0-pre3 |
-| Thunder Storm FX (Japan) | Froze on the Sega logo ([#111](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/111)) | Main r2, also with the official core |
-| Flashback | With CHD images, hung after the level 2 machine cutscene ([#49](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/49)) | Main r2, also with the official core |
-
-The other MegaCD fixes are not tied to a known game; each release lists them.
+**MegaCD status**: games fixed so far, known limits, every change of the modified Main and the version history are on the [MegaCD status page](MegaCD.md).
 
 <details>
 <summary>What was tested</summary>
 
 - TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
-- MegaCD v0.1.0-pre8 with [20261010-megacd-savestates-r6](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r6): krikzz's mcd-verificator, 100 save/load cycles in Power Rangers, save and load in 19 games, and slots from earlier versions in five games.
+- MegaCD: see [How each version is tested](MegaCD.md#how-each-version-is-tested) and the notes of each release.
 
 These were targeted checks, not the full suite. Details are in each release.
 
