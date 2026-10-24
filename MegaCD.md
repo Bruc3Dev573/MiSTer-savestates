@@ -1,12 +1,12 @@
 # MegaCD / Sega CD savestates: status
 
-The current state of the MegaCD savestate core and its modified Main. Unofficial test builds, not MiSTer-devel releases. Each release lists only what changed in that version and links here for the rest.
+The current state of the MegaCD savestate core and its modified Main. Unofficial builds, not MiSTer-devel releases. Each release lists only what changed in that version and links here for the rest.
 
 ## Current version
 
 | Core | Main for disc images (`MiSTer`) | Main for a real CD drive (`MiSTer_Physical-CD`) |
 |---|---|---|
-| [v0.1.0-pre9](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre9) | [20261010-megacd-savestates-r7](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r7) | [v2.10.0-megacd-savestates-r7](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r7) |
+| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0), first stable release | [20261010-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r8) | [v2.10.0-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r8) |
 
 Use the core and a Main of the same row together: some fixes are split between the two. How to install them: [MiSTer-savestates](README.md#install).
 
@@ -22,19 +22,19 @@ Slots saved with earlier versions load in the current one. A slot saved with a n
 | Ultraverse Prime | Over HDMI the picture sheared for about 2 s every 10 s ([#36](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/36)) | core v0.1.0-pre3 |
 | Thunder Storm FX (Japan) | Froze on the Sega logo ([#111](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/111)) | Main r2, also with the official core |
 | Flashback | With CHD images, hung after the level 2 machine cutscene ([#49](https://github.com/MiSTer-devel/MegaCD_MiSTer/issues/49)) | Main r2, also with the official core |
+| Dune | Got stuck after a save or a load during the intro videos, about once in ten | core v0.1.0 with Main r8 |
 
 The other fixes are not tied to a known game: they make the hardware behave more like the real console.
 
 ## Known limits
 
-- **Dune**: a save or a load during the intro videos can leave the game stuck, about once in ten. In our tests, loading the slot again got it going. Being looked into.
 - When a game switches between the 256 and 320 pixel modes, or a state saved in the other mode is loaded, the new width shows 4 frames later.
 - MGL files that point to `_Console/MegaCD` start this core too. Remove the RBF to go back.
 - The Main for a real CD drive has been run on MiSTer with disc images only. No real drive has been tested.
 
 ## krikzz's mcd-verificator
 
-[mcd-verificator](https://github.com/krikzz/mega-ed-pub/tree/8b72838f8b449e34e519b53d9e9b8fd2021a6044/mcd-verificator) measures the Mega CD hardware against the real console. With v0.1.0-pre9 and the r7 Main:
+[mcd-verificator](https://github.com/krikzz/mega-ed-pub/tree/8b72838f8b449e34e519b53d9e9b8fd2021a6044/mcd-verificator) measures the Mega CD hardware against the real console. With v0.1.0 and the r8 Main:
 
 - The CD drive test passes, CDD SYNC included (since v0.1.0-pre9).
 - The timing checks still report errors: VAR, IRQ, REG 8030, PCM CLOCK from channel 4, DEC IRQ and the DMA timings. They measure main CPU speed.
@@ -46,8 +46,8 @@ The official MiSTer Main 20261010 plus these changes. The Physical Disc build is
 
 Savestates:
 
-- After a load the CD drive goes back where the game was, also when the save was made just after a CD command (play, seek, pause, resume) or while CD music played. CD data pauses while the core is frozen.
-- Slots are kept on the SD card under the disc's name. Loading a slot does not write the slot file again.
+- After a load the CD drive goes back where the game was, also when the save was made just after a CD command (play, seek, pause, resume), while CD music played or while the drive was moving. CD data pauses while the core is frozen, and a drive report due at a save is kept (r8).
+- Slots are kept on the SD card under the disc's name. Loading a slot does not write the slot file again, and a slot file is written in small pieces so the CD drive keeps running (r8).
 
 CD drive and disc data:
 
@@ -71,6 +71,7 @@ On MiSTer, from disc images, before each release: krikzz's mcd-verificator and i
 
 | Core | Date | Main | What changed |
 |---|---|---|---|
+| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0) | 2026-10-24 | r8 | First stable release: Dune no longer stuck after a save or load; no CD pause while a slot is written |
 | [v0.1.0-pre9](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre9) | 2026-10-22 | r7 | CD drive timing closer to the real console |
 | [v0.1.0-pre8](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre8) | 2026-10-20 | r6 | FM chip state saved; data sectors with error-correction bytes |
 | [v0.1.0-pre7](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre7) | 2026-10-19 | r5 | Sound CPU saved while the main CPU holds its bus; CD drive after a pending command; SD free space |
