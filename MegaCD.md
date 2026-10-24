@@ -6,7 +6,7 @@ The current state of the MegaCD savestate core and its modified Main. Unofficial
 
 | Core | Main for disc images (`MiSTer`) | Main for a real CD drive (`MiSTer_Physical-CD`) |
 |---|---|---|
-| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0), first stable release | [20261010-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r8) | [v2.10.0-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r8) |
+| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0), first stable release | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.10.0-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r9) |
 
 Use the core and a Main of the same row together: some fixes are split between the two. How to install them: [MiSTer-savestates](README.md#install).
 
@@ -47,7 +47,7 @@ The official MiSTer Main 20261010 plus these changes. The Physical Disc build is
 Savestates:
 
 - After a load the CD drive goes back where the game was, also when the save was made just after a CD command (play, seek, pause, resume), while CD music played or while the drive was moving. CD data pauses while the core is frozen, and a drive report due at a save is kept (r8).
-- Slots are kept on the SD card under the disc's name. Loading a slot does not write the slot file again, and a slot file is written in small pieces so the CD drive keeps running (r8).
+- Slots are kept on the SD card under the disc's name. Loading a slot does not write the slot file again, and a slot file is written in small pieces so the CD drive keeps running (r8). Two saves in a row to the same slot no longer mix in the file (r9).
 
 CD drive and disc data:
 
@@ -71,7 +71,7 @@ On MiSTer, from disc images, before each release: krikzz's mcd-verificator and i
 
 | Core | Date | Main | What changed |
 |---|---|---|---|
-| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0) | 2026-10-24 | r8 | First stable release: Dune no longer stuck after a save or load; no CD pause while a slot is written |
+| [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0) | 2026-10-24 | r8, r9 | First stable release: Dune no longer stuck after a save or load; no CD pause while a slot is written. Main r9: two saves in a row to one slot no longer mix |
 | [v0.1.0-pre9](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre9) | 2026-10-22 | r7 | CD drive timing closer to the real console |
 | [v0.1.0-pre8](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre8) | 2026-10-20 | r6 | FM chip state saved; data sectors with error-correction bytes |
 | [v0.1.0-pre7](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre7) | 2026-10-19 | r5 | Sound CPU saved while the main CPU holds its bus; CD drive after a pending command; SD free space |

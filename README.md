@@ -33,7 +33,7 @@ The Main is the MiSTer program at the SD root. Each savestate core has its own m
 
 | Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
-| MegaCD | [20261010-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r8) | [v2.10.0-megacd-savestates-r8](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r8) |
+| MegaCD | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.10.0-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r9) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
 
 The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only, with save and load in Mighty Morphin Power Rangers; no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
