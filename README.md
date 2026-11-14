@@ -6,11 +6,12 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
 | MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | `MegaCD_SS_20261105.rbf` | Yes |
+| Sega 32X | [v0.1.0-pre1](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre1) | `S32X_SS_20261114.rbf` | No |
 
 ## Install
 
 1. Copy the RBF to `_Console` on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
-2. Install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core).
+2. TurboGrafx16 and MegaCD: install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core). The 32X core works with the official Main.
 3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
 > [!WARNING]
@@ -18,18 +19,18 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 
 ## Controls
 
-| | TurboGrafx16 | MegaCD |
-|---|---|---|
-| Keyboard | **Alt+F1-F4** save to slot 1-4, **F1-F4** load | same |
-| Pad | Hold the button mapped to **Savestates**, then **Down** save, **Up** load, **Left/Right** change slot | Hold **Savestate**, then **Mode+Down** save, **Mode+Up** load, **Left/Right** change slot |
-| OSD | Save state and Restore state | same, with a slot selector |
-| Notes | Enable **Savestates to SDCard** to keep slots on the SD card. Writing a slot to the SD card can cause a short CD audio gap. | Set the region in the OSD; F1-F3 no longer change it. |
+| | TurboGrafx16 | MegaCD | 32X |
+|---|---|---|---|
+| Keyboard | **Alt+F1-F4** save to slot 1-4, **F1-F4** load | same | same |
+| Pad | Hold the button mapped to **Savestates**, then **Down** save, **Up** load, **Left/Right** change slot | Hold **Savestate**, then **Mode+Down** save, **Mode+Up** load, **Left/Right** change slot | same as MegaCD |
+| OSD | Save state and Restore state | same, with a slot selector | same as MegaCD |
+| Notes | Enable **Savestates to SDCard** to keep slots on the SD card. Writing a slot to the SD card can cause a short CD audio gap. | Set the region in the OSD; F1-F3 no longer change it. | Set the region in the OSD; F1-F3 no longer change it and F4 no longer hides the 32X layer. |
 
 Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits; for MegaCD all of them are on the [status page](MegaCD.md#known-limits).
 
 ## Which Main
 
-The Main is the MiSTer program at the SD root. Each savestate core has its own modified Main. You can replace the official one, keeping a copy (`update_all` and Physical Disc Support updates put the original back), or keep it and [let MiSTer start the modified Main only for that core](#use-a-different-main-for-each-core). If you use both savestate cores, use one Main per core.
+The Main is the MiSTer program at the SD root. The TurboGrafx16 and MegaCD savestate cores each have their own modified Main; the 32X core uses the official one. You can replace the official one, keeping a copy (`update_all` and Physical Disc Support updates put the original back), or keep it and [let MiSTer start the modified Main only for that core](#use-a-different-main-for-each-core). If you use both of them, use one Main per core.
 
 | Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
@@ -49,6 +50,7 @@ Use the MegaCD core and a Main of the same version together: some fixes are spli
 
 - TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
 - MegaCD: see [How each version is tested](MegaCD.md#how-each-version-is-tested) and the notes of each release.
+- 32X: see the notes of the release.
 
 These were targeted checks, not the full suite. Details are in each release.
 
@@ -118,9 +120,10 @@ The other Physical Disc cores keep `MiSTer_Physical-CD`, and Auto Disc Detection
 |---|---|---|
 | [TurboGrafx16_MiSTer](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer) | [MiSTer-devel/TurboGrafx16_MiSTer](https://github.com/MiSTer-devel/TurboGrafx16_MiSTer) | `savestates` |
 | [MegaCD_MiSTer](https://github.com/Bruc3Dev573/MegaCD_MiSTer) | [MiSTer-devel/MegaCD_MiSTer](https://github.com/MiSTer-devel/MegaCD_MiSTer) | `savestates` |
+| [S32X_MiSTer](https://github.com/Bruc3Dev573/S32X_MiSTer) | [MiSTer-devel/S32X_MiSTer](https://github.com/MiSTer-devel/S32X_MiSTer) | `savestates` |
 | [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
 | [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | [Anime0t4ku/Main_MiSTer_Physical_Disc](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
 
 ## Report a problem
 
-Open an issue in the repository of the core: [TurboGrafx16](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/issues) or [MegaCD](https://github.com/Bruc3Dev573/MegaCD_MiSTer/issues). Say which game, HuCard, disc image or real drive, what you did and what happened.
+Open an issue in the repository of the core: [TurboGrafx16](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/issues), [MegaCD](https://github.com/Bruc3Dev573/MegaCD_MiSTer/issues) or [32X](https://github.com/Bruc3Dev573/S32X_MiSTer/issues). Say which game, HuCard, disc image or real drive, what you did and what happened.
