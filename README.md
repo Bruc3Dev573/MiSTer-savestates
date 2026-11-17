@@ -2,16 +2,17 @@
 
 Savestates for MiSTer cores that do not have them yet. Unofficial test builds, not MiSTer-devel releases. Report problems in the repository of each core, not on the official repos.
 
-| Core | Latest release | Copy to `_Console` | Modified Main needed |
+| Core | Latest release | RBF | Modified Main needed |
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
 | MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | `MegaCD_SS_20261105.rbf` | Yes |
 | Sega 32X | [v0.1.0-pre2](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre2) | `S32X_SS_20261115.rbf` | No |
+| C64 | [v0.1.0-pre1](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1) | `C64_SS_20261117.rbf`, in `_Computer` | To keep slots on the SD card |
 
 ## Install
 
-1. Copy the RBF to `_Console` on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
-2. TurboGrafx16 and MegaCD: install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core). The 32X core works with the official Main.
+1. Copy the RBF to `_Console` (C64: `_Computer`) on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
+2. TurboGrafx16, MegaCD and C64: install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core). The 32X core works with the official Main. The C64 core also works with the official Main, but its slots then stay in memory until the MiSTer is powered off.
 3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
 > [!WARNING]
@@ -28,14 +29,17 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 
 Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits; for MegaCD all of them are on the [status page](MegaCD.md#known-limits).
 
+C64: hold **Savestates** (Select by default), then **Down** save, **Up** load, **Left/Right** change slot; **Ctrl+Alt+F1-F4** select a slot; the OSD has Save state, Restore state, a slot selector and a self-test. The keyboard F1-F8 keys stay with the C64. A one-off build with a Pause button is [v0.1.0-pre1-pause](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1-pause). Details and limits in the [core README](https://github.com/Bruc3Dev573/C64_MiSTer/tree/savestates#savestates-unofficial-build).
+
 ## Which Main
 
-The Main is the MiSTer program at the SD root. The TurboGrafx16 and MegaCD savestate cores each have their own modified Main; the 32X core uses the official one. You can replace the official one, keeping a copy (`update_all` and Physical Disc Support updates put the original back), or keep it and [let MiSTer start the modified Main only for that core](#use-a-different-main-for-each-core). If you use both of them, use one Main per core.
+The Main is the MiSTer program at the SD root. The TurboGrafx16, MegaCD and C64 savestate cores each have their own modified Main; the 32X core uses the official one. You can replace the official one, keeping a copy (`update_all` and Physical Disc Support updates put the original back), or keep it and [let MiSTer start the modified Main only for that core](#use-a-different-main-for-each-core). If you use more than one of them, use one Main per core.
 
 | Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
 | MegaCD | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.10.0-megacd-savestates-r10](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r10) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
+| C64 | [20261010-c64-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-c64-savestates-r2) | — |
 
 The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only, with save and load in Mighty Morphin Power Rangers; no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
 
@@ -51,6 +55,7 @@ Use the MegaCD core and a Main of the same version together: some fixes are spli
 - TurboGrafx16 v0.2.0-pre2 with [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates): 50 Sherlock restores, Rondo intro and gameplay save/load with CD audio, and Bonk movement and save/load.
 - MegaCD: see [How each version is tested](MegaCD.md#how-each-version-is-tested) and the notes of each release.
 - 32X: see the notes of the release.
+- C64: see the notes of the release.
 
 These were targeted checks, not the full suite. Details are in each release.
 
@@ -62,7 +67,7 @@ Keep the official Main and let MiSTer start a modified one only for the savestat
 
 Power off and back up `MiSTer.ini` before you start. If a section below already exists, add the `main=` line to it instead of a second copy.
 
-### Disc images
+### Disc images and C64
 
 1. Download `MiSTer` from each core's release in [the table above](#which-main) and rename it:
 
@@ -70,6 +75,7 @@ Power off and back up `MiSTer.ini` before you start. If a section below already 
    |---|---|
    | MegaCD | `MiSTer_MegaCD_SS` |
    | TurboGrafx16 | `MiSTer_PCECD_SS` |
+   | C64 | `MiSTer_C64_SS` |
 
 2. Copy the renamed files to the SD root, next to `MiSTer`. Leave `MiSTer` as it is.
 3. Add the sections you need to `MiSTer.ini`:
@@ -80,9 +86,12 @@ Power off and back up `MiSTer.ini` before you start. If a section below already 
 
    [TGFX16]
    main=MiSTer_PCECD_SS
+
+   [C64]
+   main=MiSTer_C64_SS
    ```
 
-`MegaCD` and `TGFX16` are core names, not file names. The official MegaCD and TurboGrafx16 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD fixes for Thunder Storm FX and Flashback help the official core too.
+`MegaCD`, `TGFX16` and `C64` are core names, not file names. The official MegaCD, TurboGrafx16 and C64 cores have the same names, so they also start the modified Main. That is fine: other games run as with the official Main, and the MegaCD fixes for Thunder Storm FX and Flashback help the official core too.
 
 ### Real CD drive (Physical Disc Support)
 
@@ -121,9 +130,10 @@ The other Physical Disc cores keep `MiSTer_Physical-CD`, and Auto Disc Detection
 | [TurboGrafx16_MiSTer](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer) | [MiSTer-devel/TurboGrafx16_MiSTer](https://github.com/MiSTer-devel/TurboGrafx16_MiSTer) | `savestates` |
 | [MegaCD_MiSTer](https://github.com/Bruc3Dev573/MegaCD_MiSTer) | [MiSTer-devel/MegaCD_MiSTer](https://github.com/MiSTer-devel/MegaCD_MiSTer) | `savestates` |
 | [S32X_MiSTer](https://github.com/Bruc3Dev573/S32X_MiSTer) | [MiSTer-devel/S32X_MiSTer](https://github.com/MiSTer-devel/S32X_MiSTer) | `savestates` |
-| [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
+| [C64_MiSTer](https://github.com/Bruc3Dev573/C64_MiSTer) | [MiSTer-devel/C64_MiSTer](https://github.com/MiSTer-devel/C64_MiSTer) | `savestates` |
+| [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) | `megacd-savestates`, `pcecd-savestates`, `c64-savestates` (`savestates`, MegaCD and TurboGrafx16, no longer updated) |
 | [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | [Anime0t4ku/Main_MiSTer_Physical_Disc](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) | `megacd-savestates`, `pcecd-savestates` (`savestates`, both cores, no longer updated) |
 
 ## Report a problem
 
-Open an issue in the repository of the core: [TurboGrafx16](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/issues), [MegaCD](https://github.com/Bruc3Dev573/MegaCD_MiSTer/issues) or [32X](https://github.com/Bruc3Dev573/S32X_MiSTer/issues). Say which game, HuCard, disc image or real drive, what you did and what happened.
+Open an issue in the repository of the core: [TurboGrafx16](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/issues), [MegaCD](https://github.com/Bruc3Dev573/MegaCD_MiSTer/issues), [32X](https://github.com/Bruc3Dev573/S32X_MiSTer/issues) or [C64](https://github.com/Bruc3Dev573/C64_MiSTer/issues). Say which game, HuCard, disc image, real drive or C64 file, what you did and what happened.
