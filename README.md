@@ -29,7 +29,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 
 Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits; for MegaCD all of them are on the [status page](MegaCD.md#known-limits).
 
-C64: hold **Savestates** (Select by default), then **Down** save, **Up** load, **Left/Right** change slot; **Ctrl+Alt+F1-F4** select a slot; the OSD has Save state, Restore state, a slot selector and a self-test. The keyboard F1-F8 keys stay with the C64. A one-off build with a Pause button is [v0.1.0-pre1-pause](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1-pause). Details and limits in the [core README](https://github.com/Bruc3Dev573/C64_MiSTer/tree/savestates#savestates-unofficial-build).
+C64: hold **Savestates** (Select by default) and press **Down** to save, **Up** to load, or **Left/Right** to change slot. **Ctrl+Alt+F1-F4** select a slot from the keyboard, and the F keys without Ctrl+Alt still reach the C64. The OSD has Save state, Restore state, a slot selector and a self-test. A one-off build with a Pause button is available as [v0.1.0-pre1-pause](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1-pause). The [core README](https://github.com/Bruc3Dev573/C64_MiSTer/tree/savestates#savestates-unofficial-build) lists the details and the limits.
 
 ## Which Main
 
