@@ -7,7 +7,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | TurboGrafx16 / PC Engine | [v0.2.0-pre2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v0.2.0-pre2) | `TurboGrafx16_SS_20261011.rbf` | CD games only |
 | MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | `MegaCD_SS_20261105.rbf` | Yes |
 | Sega 32X | [v0.1.0-pre3](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre3) | `S32X_SS_20261118.rbf` | No |
-| C64 | [v0.1.0-pre1](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1) | `C64_SS_20261117.rbf`, in `_Computer` | To keep slots on the SD card |
+| C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | `C64_SS_20261119.rbf`, in `_Computer` | To keep slots on the SD card |
 
 ## Install
 
@@ -29,7 +29,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 
 Load a state with the same game or disc, BIOS and region you saved it with. Each release lists its known limits; for MegaCD all of them are on the [status page](MegaCD.md#known-limits).
 
-C64: hold **Savestates** (Select by default) and press **Down** to save, **Up** to load, or **Left/Right** to change slot. **Ctrl+Alt+F1-F4** select a slot from the keyboard, and the F keys without Ctrl+Alt still reach the C64. The OSD has Save state, Restore state, a slot selector and a self-test. A one-off build with a Pause button is available as [v0.1.0-pre1-pause](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre1-pause). The [core README](https://github.com/Bruc3Dev573/C64_MiSTer/tree/savestates#savestates-unofficial-build) lists the details and the limits.
+C64: hold **Savestates** (Select by default) and press **Down** to save, **Up** to load, or **Left/Right** to change slot. **Ctrl+Alt+F1-F4** select a slot from the keyboard, and the F keys without Ctrl+Alt still reach the C64. The OSD has Save state, Restore state, a slot selector and a self-test. A one-off build with a Pause button is available as [v0.1.0-pre2-pause](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2-pause). The [core README](https://github.com/Bruc3Dev573/C64_MiSTer/tree/savestates#savestates-unofficial-build) lists the details and the limits.
 
 ## Which Main
 
