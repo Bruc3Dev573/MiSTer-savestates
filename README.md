@@ -2,16 +2,16 @@
 
 Savestates for MiSTer cores that do not have them yet. Unofficial test builds, not MiSTer-devel releases. Report problems in the repository of each core, not on the official repos.
 
-| Core | Release notes | Download | Main download |
-|---|---|---|---|
-| TurboGrafx16 / PC Engine | [v1.0.2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v1.0.2) | [TurboGrafx16_SS_20261124.rbf](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/download/v1.0.2/TurboGrafx16_SS_20261124.rbf) | CD only: [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-pcecd-savestates/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.11.0-pcecd-savestates/MiSTer_Physical-CD) |
-| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [MegaCD_SS_20261105.rbf](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/download/v0.1.1/MegaCD_SS_20261105.rbf) | [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-megacd-savestates-r9/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.11.0-megacd-savestates-r11/MiSTer_Physical-CD) |
-| Sega 32X | [v0.1.0-pre4](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre4) | [S32X_SS_20261120.rbf](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/download/v0.1.0-pre4/S32X_SS_20261120.rbf) | Official |
-| C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | [C64_SS_20261119.rbf](https://github.com/Bruc3Dev573/C64_MiSTer/releases/download/v0.1.0-pre2/C64_SS_20261119.rbf), in `_Computer` | [SD slots](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-c64-savestates-r2/MiSTer) |
+| Core | Release notes | Download | Folder | Main download |
+|---|---|---|---|---|
+| TurboGrafx16 / PC Engine | [v1.0.2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v1.0.2) | [TurboGrafx16_SS_20261124.rbf](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/download/v1.0.2/TurboGrafx16_SS_20261124.rbf) | `_Console` | CD only: [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-pcecd-savestates/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.11.0-pcecd-savestates/MiSTer_Physical-CD) |
+| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [MegaCD_SS_20261105.rbf](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/download/v0.1.1/MegaCD_SS_20261105.rbf) | `_Console` | [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-megacd-savestates-r9/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.11.0-megacd-savestates-r11/MiSTer_Physical-CD) |
+| Sega 32X | [v0.1.0-pre4](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre4) | [S32X_SS_20261120.rbf](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/download/v0.1.0-pre4/S32X_SS_20261120.rbf) | `_Console` | Official |
+| C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | [C64_SS_20261119.rbf](https://github.com/Bruc3Dev573/C64_MiSTer/releases/download/v0.1.0-pre2/C64_SS_20261119.rbf) | `_Computer` | [SD slots](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-c64-savestates-r2/MiSTer) |
 
 ## Install
 
-1. Copy the RBF to `_Console` (C64: `_Computer`) on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
+1. Copy the RBF to the folder in the table on the SD card and remove older `*_SS_*.rbf` files of the same core. Back up your slots; compatibility between core versions is not guaranteed.
 2. TurboGrafx16, MegaCD and C64: install the modified Main of the core from [the table below](#which-main), either by replacing the official one or, to keep it for every other core, through [`MiSTer.ini`](#use-a-different-main-for-each-core). The 32X core works with the official Main. The C64 core also works with the official Main, but its slots then stay in memory until the MiSTer is powered off.
 3. TurboGrafx16 only: set **MB128** to **Disabled** in the OSD, then reload the core. With MB128 on, Save state and Restore state stay greyed out.
 
