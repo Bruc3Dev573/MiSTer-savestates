@@ -5,7 +5,7 @@ Savestates for MiSTer cores that do not have them yet. Unofficial test builds, n
 | Core | Release notes | Download | Main download |
 |---|---|---|---|
 | TurboGrafx16 / PC Engine | [v1.0.2](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v1.0.2) | [TurboGrafx16_SS_20261124.rbf](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/download/v1.0.2/TurboGrafx16_SS_20261124.rbf) | CD only: [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-pcecd-savestates/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.10.0-pcecd-savestates/MiSTer_Physical-CD) |
-| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [MegaCD_SS_20261105.rbf](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/download/v0.1.1/MegaCD_SS_20261105.rbf) | [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-megacd-savestates-r9/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.10.0-megacd-savestates-r10/MiSTer_Physical-CD) |
+| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [MegaCD_SS_20261105.rbf](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/download/v0.1.1/MegaCD_SS_20261105.rbf) | [Disc images](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-megacd-savestates-r9/MiSTer) · [Physical drive](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/download/v2.11.0-megacd-savestates-r11/MiSTer_Physical-CD) |
 | Sega 32X | [v0.1.0-pre4](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre4) | [S32X_SS_20261120.rbf](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/download/v0.1.0-pre4/S32X_SS_20261120.rbf) | Official |
 | C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | [C64_SS_20261119.rbf](https://github.com/Bruc3Dev573/C64_MiSTer/releases/download/v0.1.0-pre2/C64_SS_20261119.rbf), in `_Computer` | [SD slots](https://github.com/Bruc3Dev573/Main_MiSTer/releases/download/20261010-c64-savestates-r2/MiSTer) |
 
@@ -37,11 +37,11 @@ The Main is the MiSTer program at the SD root. The TurboGrafx16, MegaCD and C64 
 
 | Core | Disc images (`MiSTer`) | Real CD drive with [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) (`MiSTer_Physical-CD`) |
 |---|---|---|
-| MegaCD | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.10.0-megacd-savestates-r10](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r10) |
+| MegaCD | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.11.0-megacd-savestates-r11](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.11.0-megacd-savestates-r11) |
 | TurboGrafx16 | [20261010-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-pcecd-savestates) | [v2.10.0-pcecd-savestates](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-pcecd-savestates) |
 | C64 | [20261010-c64-savestates-r2](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-c64-savestates-r2) | — |
 
-The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only, with save and load in Mighty Morphin Power Rangers; no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
+The builds for disc images were tested on MiSTer with the latest cores. The MegaCD build for real drives was run on MiSTer with disc images only up to r10, with save and load in Mighty Morphin Power Rangers; r11, which only adds the Physical Disc Support v2.11.0 fix for Snatcher, has not been run yet, and no real drive was tried with it. A user tested the TurboGrafx16 changes with a real drive on a September build of Physical Disc Support.
 
 The Mains with both cores in one file, [20261010-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-savestates-r4) and [v2.10.0-savestates-r4](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-savestates-r4), stay online but are no longer updated. Later MegaCD fixes will not be in them.
 

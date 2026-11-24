@@ -6,7 +6,7 @@ The current state of the MegaCD savestate core and its modified Main. Unofficial
 
 | Core | Main for disc images (`MiSTer`) | Main for a real CD drive (`MiSTer_Physical-CD`) |
 |---|---|---|
-| [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.10.0-megacd-savestates-r10](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.10.0-megacd-savestates-r10) |
+| [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [20261010-megacd-savestates-r9](https://github.com/Bruc3Dev573/Main_MiSTer/releases/tag/20261010-megacd-savestates-r9) | [v2.11.0-megacd-savestates-r11](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc/releases/tag/v2.11.0-megacd-savestates-r11) |
 
 Use the core and a Main of the same row together: some fixes are split between the two. How to install them: [MiSTer-savestates](README.md#install).
 
@@ -43,7 +43,7 @@ The other fixes are not tied to a known game: they make the hardware behave more
 
 ## The modified Main
 
-The official MiSTer Main 20261010 plus these changes. The Physical Disc build is [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) with the same changes: v2.10.0 up to r9, and from r10 v2.10.0 plus its later fixes for slow drives (no freeze while the drive seeks, no read-ahead into the audio gap after the data track) and CD+G.
+The official MiSTer Main 20261010 plus these changes. The Physical Disc build is [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) with the same changes: v2.10.0 up to r9; from r10 v2.10.0 plus its later fixes for slow drives (no freeze while the drive seeks, no read-ahead into the audio gap after the data track) and CD+G; from r11 v2.11.0, where an audio track ends at the next track's INDEX 00 (Snatcher) and the drive sends silence in a pregap.
 
 Savestates:
 
@@ -72,7 +72,7 @@ On MiSTer, from disc images, before each release: krikzz's mcd-verificator and i
 
 | Core | Date | Main | What changed |
 |---|---|---|---|
-| [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | 2026-11-05 | r9, PD r10 | A load also brings back the CD subcode buffer, font registers, pending timer writes, sprite flags, interlace field and a sound CPU register. Physical Disc Main r10: latest Physical Disc Support fixes |
+| [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | 2026-11-05 | r9, PD r10, PD r11 | A load also brings back the CD subcode buffer, font registers, pending timer writes, sprite flags, interlace field and a sound CPU register. Physical Disc Main r10: latest Physical Disc Support fixes. Physical Disc Main r11 (2026-11-24): Physical Disc Support v2.11.0 |
 | [v0.1.0](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0) | 2026-10-24 | r8, r9 | First stable release: Dune no longer stuck after a save or load; no CD pause while a slot is written. Main r9: two saves in a row to one slot no longer mix |
 | [v0.1.0-pre9](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre9) | 2026-10-22 | r7 | CD drive timing closer to the real console |
 | [v0.1.0-pre8](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.0-pre8) | 2026-10-20 | r6 | FM chip state saved; data sectors with error-correction bytes |
@@ -90,7 +90,7 @@ On MiSTer, from disc images, before each release: krikzz's mcd-verificator and i
 |---|---|---|
 | [MegaCD_MiSTer](https://github.com/Bruc3Dev573/MegaCD_MiSTer) | `savestates` | [MiSTer-devel/MegaCD_MiSTer](https://github.com/MiSTer-devel/MegaCD_MiSTer) |
 | [Main_MiSTer](https://github.com/Bruc3Dev573/Main_MiSTer) | `megacd-savestates` | [MiSTer-devel/Main_MiSTer](https://github.com/MiSTer-devel/Main_MiSTer) 20261010 |
-| [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | `megacd-savestates` | [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) v2.10.0 |
+| [Main_MiSTer_Physical_Disc](https://github.com/Bruc3Dev573/Main_MiSTer_Physical_Disc) | `megacd-savestates` | [Physical Disc Support](https://github.com/Anime0t4ku/Main_MiSTer_Physical_Disc) v2.11.0 |
 
 Some fixes are also on their own branches from the official sources, without the savestates:
 
