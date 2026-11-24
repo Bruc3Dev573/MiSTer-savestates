@@ -2,12 +2,12 @@
 
 Savestates for MiSTer cores that do not have them yet. Unofficial test builds, not MiSTer-devel releases. Report problems in the repository of each core, not on the official repos.
 
-| Core | Latest release | RBF | Modified Main needed |
+| Core | Release notes | Download | Modified Main needed |
 |---|---|---|---|
-| TurboGrafx16 / PC Engine | [v1.0.1](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v1.0.1) | `TurboGrafx16_SS_20261124.rbf` | CD games only |
-| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | `MegaCD_SS_20261105.rbf` | Yes |
-| Sega 32X | [v0.1.0-pre4](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre4) | `S32X_SS_20261120.rbf` | No |
-| C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | `C64_SS_20261119.rbf`, in `_Computer` | To keep slots on the SD card |
+| TurboGrafx16 / PC Engine | [v1.0.1](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/tag/v1.0.1) | [TurboGrafx16_SS_20261124.rbf](https://github.com/Bruc3Dev573/TurboGrafx16_MiSTer/releases/download/v1.0.1/TurboGrafx16_SS_20261124.rbf) | CD games only |
+| MegaCD / Sega CD | [v0.1.1](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/tag/v0.1.1) | [MegaCD_SS_20261105.rbf](https://github.com/Bruc3Dev573/MegaCD_MiSTer/releases/download/v0.1.1/MegaCD_SS_20261105.rbf) | Yes |
+| Sega 32X | [v0.1.0-pre4](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/tag/v0.1.0-pre4) | [S32X_SS_20261120.rbf](https://github.com/Bruc3Dev573/S32X_MiSTer/releases/download/v0.1.0-pre4/S32X_SS_20261120.rbf) | No |
+| C64 | [v0.1.0-pre2](https://github.com/Bruc3Dev573/C64_MiSTer/releases/tag/v0.1.0-pre2) | [C64_SS_20261119.rbf](https://github.com/Bruc3Dev573/C64_MiSTer/releases/download/v0.1.0-pre2/C64_SS_20261119.rbf), in `_Computer` | To keep slots on the SD card |
 
 ## Install
 
